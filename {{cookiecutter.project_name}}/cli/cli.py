@@ -20,11 +20,13 @@ Help:
 
 from inspect import getmembers, isclass
 from docopt import docopt
-from . import __version__ as VERSION
+
+VERSION  = '1.0.0'
 
 def main():
     """Main CLI entrypoint."""
-    import cli.commands
+    from cli import cli
+    from cli import commands
     options = docopt(__doc__, version=VERSION)
 
     # Here we'll try to dynamically match the command the user is trying to run
