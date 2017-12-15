@@ -1,4 +1,4 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
 """__init__.py"""
-from .cmd1 import *
+__version__ = '1.0.0'
