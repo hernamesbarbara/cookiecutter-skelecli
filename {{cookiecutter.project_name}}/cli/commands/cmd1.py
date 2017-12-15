@@ -2,11 +2,12 @@
 # -*- coding: utf-8 -*- 
 """cmd1.py
 """
-from .base import Base
 try:
     import ujson as json
 except Exception as err:
     import json
+
+from .base import Base
 
 class Hello(Base):
     """Say hello, world!"""
