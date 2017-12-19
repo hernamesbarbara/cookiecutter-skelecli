@@ -9,8 +9,6 @@ except Exception as err:
 
 from .base import Base
 
-print('inside  commands/cmdname.py')
-
 class {{cookiecutter.command_name.title()}}(Base):
     """{{cookiecutter.command_name.title()}} command
     Parameters
@@ -18,5 +16,5 @@ class {{cookiecutter.command_name.title()}}(Base):
     arg1 : lorem ipsum
     """
     def run(self):
-        print('Hello, world!')
+        print('You called {{cookiecutter.command_name.title().run()')
         print('You supplied the following options:', json.dumps(self.options, indent=2, sort_keys=True))

@@ -8,7 +8,11 @@ Run the cookiecutter command and use the skelecli template to generate
 a command line app project skeleton that uses docopt.
 
 ```
+# Run it pointing to the template on github
+# $ cookiecutter git@github.com:hernamesbarbara/cookiecutter-skelecli.git
+
 $   cookiecutter cookiecutter-skelecli
+
 author_name [Austin Ogilvie]:
 project_name []: my_project
 project_slug [my_project]: my_slug
