@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
-"""cmd1.py
+"""{{cookiecutter.command_name}}.py
 """
 try:
     import ujson as json
@@ -9,9 +9,14 @@ except Exception as err:
 
 from .base import Base
 
-class Hello(Base):
-    """Say hello, world!"""
+print('inside  commands/cmdname.py')
 
+class {{cookiecutter.command_name.title()}}(Base):
+    """{{cookiecutter.command_name.title()}} command
+    Parameters
+    ----------
+    arg1 : lorem ipsum
+    """
     def run(self):
         print('Hello, world!')
         print('You supplied the following options:', json.dumps(self.options, indent=2, sort_keys=True))

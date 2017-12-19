@@ -1,18 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
-"""cli - generate a python CLI app
+"""{{cookiecutter.project_name}} - generate a python CLI app
 
 Usage:
-    cli cmd1
-    cli -h | --help
-    cli --version
+    {{cookiecutter.project_name}} {{cookiecutter.command_name}}
+    {{cookiecutter.project_name}} -h | --help
+    {{cookiecutter.project_name}} --version
 
 Options:
     -h --help                         Show this screen.
     --version                         Show version.
 
 Examples:
-    cli cmd1
+    {{cookiecutter.project_name}} {{cookiecutter.command_name}}
 
 Help:
     For help using this tool TODO
@@ -25,8 +25,7 @@ VERSION  = '1.0.0'
 
 def main():
     """Main CLI entrypoint."""
-    from cli import cli
-    from cli import commands
+    import cli.commands as commands
     options = docopt(__doc__, version=VERSION)
 
     # Here we'll try to dynamically match the command the user is trying to run

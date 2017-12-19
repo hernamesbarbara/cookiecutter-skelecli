@@ -33,13 +33,13 @@ class RunTests(Command):
         raise SystemExit(errno)
 
 setup(
-    name = 'cli',
+    name = '{{cookiecutter.project_name}}',
     version = __version__,
-    description = 'A skeleton command line program in Python.',
+    description = '{{cookiecutter.description}}',
     long_description = long_description,
-    url = 'TODO',
+    url = 'https://www.hernamesbarbara.com',
     author = 'Austin Ogilvie',
-    author_email = 'me@austinogilvie.com',
+    author_email = 'tips@cia.lol',
     license = 'UNLICENSE',
     classifiers = [
         'Intended Audience :: Developers',
@@ -55,7 +55,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ],
-    keywords = 'cli',
+    keywords = 'cli,{{cookiecutter.project_name}}',
     packages = find_packages(exclude=['docs', 'tests*']),
     install_requires = ['docopt'],
     extras_require = {
@@ -63,7 +63,7 @@ setup(
     },
     entry_points = {
         'console_scripts': [
-            'cli=cli.cli:main',
+            '{{cookiecutter.project_name}}=cli.cli:main',
         ],
     },
     cmdclass = {'test': RunTests},
